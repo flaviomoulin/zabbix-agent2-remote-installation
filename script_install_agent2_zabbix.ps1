@@ -42,7 +42,7 @@ function Func_InstallAgent {
 
         Set-Location "C:\zabbix_agent2"
 
-        Start-Process msiexec -ArgumentList "/i zabbix_agent2-6.4.1-windows64.msi SERVER=172.16.20.200 LISTENPORT=10050 HOSTNAME=$env:computername.$env:userdnsdomain /qn" -NoNewWindow -Wait
+        Start-Process msiexec -ArgumentList "/i zabbix_agent2-6.4.1-windows-amd64-openssl.msi SERVER=172.16.20.200 LISTENPORT=10050 HOSTNAME=$env:computername.$env:userdnsdomain /qn" -NoNewWindow -Wait
       
         Restart-Service -Name 'Zabbix Agent 2'
     
